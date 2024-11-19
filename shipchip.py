@@ -11,7 +11,10 @@ touch2 = touchio.TouchIn(board.TOUCH2)
 
 from prt import *
 REPL = True
-prt("Trek",REPL)
+
+
+
+prt("Welcome aboard!",REPL)
 from wise import *
 
 
@@ -28,6 +31,7 @@ paleblue = (0,0,1)
 white = (20,20,20)
 purple = (20,0,30)
 
+showdecks = False
 
 colors = [pink,gold,blue,orange,green,red,paleblue,white,purple]
 
@@ -57,19 +61,28 @@ def compthink(): #blink out all the colors when computer "thinking"
 
 
 
-for i in range(file_len("decks")):
-    dk = str(i+1)+": "+wisdom(i,"decks")
-    dk = dk.rstrip()
-    prt(dk,REPL)
+if not REPL: #pause if going to HID output
+    compthink()
+    time.sleep(2)
+    compthink()
 
-def PickDest():
-    dest = wisdom(random.randrange(file_len("dests")),"dests").rstrip()
+if showdecks:
+    for i in range(file_len("decks")):
+        dk = str(i+1)+": "+wisdom(i,"decks")
+        dk = dk.rstrip()
+        prt(dk,REPL)
+NUMDECKS = file_len("decks") - 1
+
+def PickDest(olddest):
+    dest = olddest
+    while (dest == olddest):
+        dest = wisdom(random.randrange(file_len("dests")),"dests").rstrip()
     ETA = random.randrange(3,8)
     return (dest,ETA)
 
 
 Deck = 0 # start at bridge
-(dest,ETA) = PickDest()
+(dest,ETA) = PickDest("Earth")
 
 prt (("Ship destination is: " +dest) ,REPL)
 while True:
@@ -85,7 +98,7 @@ while True:
     ETA = ETA - 1
     if ETA <= 0:
         prt("Arrived at "+dest,REPL)
-        (dest,ETA)=PickDest()
+        (dest,ETA)=PickDest(dest)
         prt (("Ship new destination is: " +dest) ,REPL)
 
 
@@ -95,8 +108,10 @@ while True:
             Deck = 0
     if val == 2:
         Deck = Deck + 1
-        if Deck > 22:
-            Deck = 22
+        if Deck > NUMDECKS:
+            Deck = NUMDECKS
     if val == 3:
         Deck = random.randrange(file_len("decks"))
     time.sleep(.25)
+
+
