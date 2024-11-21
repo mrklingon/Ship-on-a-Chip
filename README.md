@@ -10,7 +10,7 @@
 * sspythondecks created for a simple example
 
 1. Copy the files wise.py, prt.py and shipchip.py (as code.py) to neotrinkey.
-2. Copy a "dests" file (trekdests or exodests) to neotrinkey as "dests"
+2. Copy a "dests" file (trekdests or exodests) to neotrinkey as "dests" (or create your own set of destinations)
 3. Copy a "decks" file (trekdecks or sspythondecks) to neotrinkey as "decks"
         (Or create your own list of decks and dests.)
 
