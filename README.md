@@ -1,4 +1,4 @@
-#Ship on a Chip
+# Ship on a Chip
 * What IS a "starship?" :https://en.wikipedia.org/wiki/Starship
 * Inspired by https://en.wikipedia.org/wiki/Breakthrough_Starshot, https://www.scientificamerican.com/article/inside-the-breakthrough-starshot-mission-to-alpha-centauri/
 * trekdecks uses Enterprise deck as found at: https://memory-alpha.fandom.com/wiki/Constitution_class_decks
