@@ -18,4 +18,4 @@ Change REPL=True to REPL=False if you want output to be "typed" via HID interfac
 
 Change showdecks = False to showdecks = True if you want the decks to be listed on start.
 
-Touch pad #1 to go "up" a deckand pad #2 to go down - holding both jumps to a random deck.
+Touch pad #1 to go "up" a deck and pad #2 to go down - holding both jumps to a random deck.
