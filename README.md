@@ -19,3 +19,17 @@ Change REPL=True to REPL=False if you want output to be "typed" via HID interfac
 Change showdecks = False to showdecks = True if you want the decks to be listed on start.
 
 Touch pad #1 to go "up" a deck and pad #2 to go down - holding both jumps to a random deck.
+
+
+### Files:
+
+* shipchip.py - ship on a chip - copy to code.py
+* prt.py - copy to neotrinkey
+* wise.py - copy to neotrinkey
+
+* exodests - rename to dests for use
+* sspythondecks - rename to dests for us
+
+* trekdecks - rename to decks for use
+* trekdests - rename to dests for use
+
